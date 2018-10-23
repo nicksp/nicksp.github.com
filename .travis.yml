@@ -13,9 +13,7 @@ node_js:
 git:
   depth: 3
 script:
-  - rm -rf .cache
-  - rm -rf public
-  - npm run build
+  - yarn build
 deploy:
   provider: pages
   skip-cleanup: false
