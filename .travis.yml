@@ -13,10 +13,12 @@ node_js:
 git:
   depth: 3
 script:
-  - yarn build
+  - rm -rf .cache
+  - rm -rf public
+  - npm run build
 deploy:
   provider: pages
-  skip-cleanup: true
+  skip-cleanup: false
   keep-history: true
   github-token: $GITHUB_TOKEN
   local-dir: public
